@@ -1,0 +1,35 @@
+create table tbContato(
+	idContato int primary key AUTO_INCREMENT,
+    nomeContato varchar(70) not null,
+    emailContato varchar(200),
+    assuntoContato varchar(2000),
+    mensagemContato varchar(2000)
+);
+create table tbCategoria(
+	idCategoria int primary key AUTO_INCREMENT,
+	categoria varchar(60)
+);
+create table tbProduto(
+	idProduto int primary key AUTO_INCREMENT,
+	nomeProduto varchar(70),
+	quantidade int,
+	valor varchar(200)
+);
+INSERT INTO tbContato (nomeContato, emailContato, assuntoContato, mensagemContato) VALUES 
+('João Silva', 'joao.silva@email.com', 'Dúvida sobre produto', 'Gostaria de saber mais sobre o produto X.'),
+('Maria Oliveira', 'maria.oliveira@email.com', 'Sugestão de melhoria', 'Seria interessante ter mais opções de pagamento.'),
+('Pedro Santos', 'pedro.santos@email.com', 'Reclamação', 'Recebi o produto errado, gostaria de trocar.'),
+('Ana Costa', 'ana.costa@email.com', 'Informação sobre entrega', 'Qual é o prazo de entrega para minha região?'),
+('Lucas Almeida', 'lucas.almeida@email.com', 'Feedback', 'Amei o atendimento, parabéns!');
+INSERT INTO tbCategoria (categoria) VALUES
+('Eletrônicos'),
+('Roupas'),
+('Alimentos'),
+('Móveis'),
+('Livros');
+INSERT INTO tbProduto (nomeProduto, quantidade, valor) VALUES
+('Smartphone XYZ', 50, '1200'),
+('Camisa Polo', 100, '80'),
+('Cadeira Escritório', 30, '300'),
+('Livro de Programação', 200, '60'),
+('Chocolate ao leite', 500, '5')
